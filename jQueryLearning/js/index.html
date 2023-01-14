@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Learning</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Hello Prerna, This is my first line of jQuery.</h1>
+        <h1 class="p1">Hello Prerna, This is my second line of jQuery.</h1>
+        <h1 class="p1">Hello Prerna, This is my third line of jQuery.</h1>
+        <h1 id="p2">Hello Prerna, This is my fourth line of jQuery.</h1>
+        <h1>Hello Prerna, This is my fifth line of jQuery.</h1>
+        <button id="b1">Hide All H1 Tages</button>
+        <button id="b2">Hide All p1 classes</button>
+        <button id="b3">Hide All p2 ids</button>
+    </body>
+    <script src="jquery-3.6.3.min.js"></script>
+    <!-- jQuery CDN  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+            crossorigin="anonymous">
+    </script> -->
+    <!-- <script>
+        $(document).ready(function(){
+        $("h1").show();
+        });
+    </script> -->
+    <!-- <script>
+    console.log('we are using jQuery');
+    $(document).ready(function(){
+    $('h1').click (function(){
+        console.log('You clicked on h1');
+    });
+    });
+    </script> -->
+<script>
+    $(document).ready(function(){
+        $("h1").click(function(){
+            $(this).hide("slow");
+        });
+        $("#b1").click(function(){
+        // $("h1").hide();
+            $("h1").hide("10000");
+        });
+        $("#b2").click(function(){
+        // $(".p1").hide();
+            $(".p1").hide("5000");
+        });
+        $("#b3").click(function(){
+        //    $("#p2").hide();
+            $("#p2").hide("slow");
+        });
+    });
+</script>
+</html>
