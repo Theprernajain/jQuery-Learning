@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Hello, My name is Prerna Jain. And i am learning here jquery css classes. So basically there are three CSS CLASSES Add Remove Toggle!!!
+    </div>
+    <style>
+        .p1
+        {
+            height: 500px;
+            width: 1500px;
+            background-color: rgb(21, 50, 92);
+            font-size: 90px;
+            font-weight: 400;
+            text-shadow: 20px;
+            text-align: center;
+            font-style: oblique;
+            box-sizing: border-box;
+            border: 10px;
+            color: azure;
+           
+        }
+    </style>
+    <button id="btn1"  class="btn btn-primary text" style="background-color: rgb(59, 6, 37); color: aliceblue; height: 90px; width: 90px;" >
+        Add Css Class
+    </button>
+    <button id="btn2"  class="btn btn-primary text " style="background-color: rgb(20, 21, 92); color: aliceblue; height: 90px; width: 90px;">
+        Remove Css Class
+    </button>
+    <button id="btn3"  class="btn btn-primary text "  style="background-color: rgb(167, 49, 49); color: aliceblue;height: 90px; width: 90px; ">
+        Toggle Css Class
+    </button>
+    
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+     $("#btn1").click(function(){
+      $("div").addClass("p1");
+     });
+     $("#btn2").click(function(){
+      $("div").removeClass("p1");
+     });
+     $("#btn3").click(function(){
+      $("div").toggleClass("p1");
+     });
+
+     $("div").mouseenter(function(){
+                 $('div').animate({'right':'800px'},7000);
+                 $('div').fadeIn(4000);
+                 $('div').animate({'left':'800px'},5000);
+                 $('div').fadeOut(3000);
+                });
+    });
+</script>
+</html>
